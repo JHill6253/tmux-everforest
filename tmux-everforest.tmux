@@ -22,7 +22,7 @@ main() {
 		theme="dark-medium"
 	fi
 
-	tmux source-file "$CURRENT_DIR/everforest-${theme}.tmuxtheme"
+	"$CURRENT_DIR/everforest-${theme}.tmuxtheme"
 }
 
 main
