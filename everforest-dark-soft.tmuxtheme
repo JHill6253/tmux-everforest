@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Everforest Dark Soft theme for tmux
+# Based on: https://github.com/sainnhe/everforest
+
+thm_bg="#333C43"
+thm_bg_dim="#293136"
+thm_bg1="#3A464C"
+thm_bg2="#434F55"
+thm_bg3="#4D5960"
+thm_bg4="#555F66"
+thm_bg_visual="#5C3F4F"
+thm_bg_red="#59464C"
+thm_bg_yellow="#55544A"
+thm_bg_green="#48584E"
+thm_bg_blue="#3F5865"
+
+thm_fg="#D3C6AA"
+thm_red="#E67E80"
+thm_orange="#E69875"
+thm_yellow="#DBBC7F"
+thm_green="#A7C080"
+thm_aqua="#83C092"
+thm_blue="#7FBBB3"
+thm_purple="#D699B6"
+thm_grey0="#7A8478"
+thm_grey1="#859289"
+thm_grey2="#9DA9A0"
+
+tmux set-option -g status-position bottom
+tmux set-option -g status-style "bg=${thm_bg1},fg=${thm_fg}"
+tmux set-option -g status-left-length 100
+tmux set-option -g status-right-length 100
+
+tmux set-option -g status-left "#[bg=${thm_green},fg=${thm_bg},bold] #S #[bg=${thm_bg1},fg=${thm_green}]"
+tmux set-option -g status-right "#[bg=${thm_bg1},fg=${thm_grey1}] %Y-%m-%d #[bg=${thm_bg3},fg=${thm_fg}] %H:%M #[bg=${thm_blue},fg=${thm_bg},bold] #h "
+
+tmux set-window-option -g window-status-separator ""
+tmux set-window-option -g window-status-format "#[bg=${thm_bg2},fg=${thm_grey1}] #I #[bg=${thm_bg2},fg=${thm_grey2}]#W#F "
+tmux set-window-option -g window-status-current-format "#[bg=${thm_green},fg=${thm_bg},bold] #I #[bg=${thm_bg_green},fg=${thm_green},bold]#W#F "
+
+tmux set-option -g pane-border-style "fg=${thm_bg3}"
+tmux set-option -g pane-active-border-style "fg=${thm_green}"
+
+tmux set-option -g message-style "bg=${thm_bg_yellow},fg=${thm_fg}"
+tmux set-option -g message-command-style "bg=${thm_bg_yellow},fg=${thm_fg}"
+
+tmux set-option -g mode-style "bg=${thm_bg_visual},fg=${thm_fg}"
+
+tmux set-option -g display-panes-active-colour "${thm_green}"
+tmux set-option -g display-panes-colour "${thm_blue}"
+
+tmux set-window-option -g clock-mode-colour "${thm_blue}"
