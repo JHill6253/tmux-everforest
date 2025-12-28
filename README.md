@@ -40,6 +40,7 @@ Add this to your `~/.tmux.conf`:
 
 ```bash
 set -g @plugin 'JHill6253/tmux-everforest'
+set -g @everforest_theme 'dark-medium' # Options: dark-hard, dark-medium, dark-soft, light-hard, light-medium, light-soft
 ```
 
 Then press `prefix + I` to install.
